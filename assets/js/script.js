@@ -77,14 +77,10 @@ let group = {
     },
 
 
-    // deleteStudent: function (id, students){
+    deleteStudent: function (id, students){
 
-    //    if(this.students.id == id){
-    //     delete  this.students;
-    //    }
-      
-    //     return this.students;
-    //   },
+       return this.students = this.students.filter(student => student.id !== id);
+      },
 
     searchStudents:function(searchText, students){
             
@@ -118,5 +114,6 @@ group.addStudent(stu3);
 
 // let result = group.searchStudents("Tunzale", this.students)
 // let result = group.getById(2, this.students)
+// let result = group.deleteStudent(2, this.students);
 let result = group.deleteStudent(2, this.students);
 console.log(result)
